@@ -1,7 +1,6 @@
 let getMovies = document.getElementById('get-movies');
-getMovies.addEventListener("click", evt => {
 
-
+window.onload = function(){
     let moviesDiv = document.getElementById('movies');
 
     fetch('https://my-json-server.typicode.com/moviedb-tech/movies/list')
@@ -9,8 +8,10 @@ getMovies.addEventListener("click", evt => {
     .then(movies => {
         movies.forEach(movie => {
             moviesDiv.innerHTML += `
-            <div>
-                <img src=${movie.img} />
+            <div class="movie-card">
+                <div class="img">
+                    <img src=${movie.img} />
+                </div>
                 <h3>${movie.name}</h3>
                 <h4>${movie.year}</h4>
             </div>
@@ -18,4 +19,4 @@ getMovies.addEventListener("click", evt => {
         })
         
     })
-})
+}
