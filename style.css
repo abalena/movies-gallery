@@ -166,8 +166,8 @@ img{
 }
 input.fav{
 	position: absolute;
-    top: -13px;
-    right: 9px;
+    top: 0px;
+    right: 0px;
 	visibility:hidden;
     font-size:30px;
     color: #FCE419;
@@ -176,11 +176,14 @@ input.fav{
 .fav:before {
     content: "\2606";
     position: absolute;
-    visibility:visible;
+    top: 0;
+    right: 0;
+    visibility:visible;  
  }
+
  .fav:checked:before {
-    
     content: "\2605";
     position: absolute;
-    
+    top: 0;
+    right: 0;
  }
